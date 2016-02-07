@@ -29,7 +29,8 @@
     "html-webpack-plugin": "latest",
     "css-loader": "latest",
     "style-loader": "latest",
-    "raw-loader": "latest"
+    "raw-loader": "latest",
+    "deep-merge": "latest"
   },
   "standard": {
     "globals": [

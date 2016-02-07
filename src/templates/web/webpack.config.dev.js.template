@@ -1,35 +1,18 @@
-var path = require('path')
+var BaseConfig = require('./webpack.config.base.js')
 var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = {
+
+devConfig = {
   devtool: 'cheap-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/dev-server',
-    './src/index'
+    'webpack/hot/dev-server'
   ],
-  output: {
-    path: path.join(__dirname, 'build'),
-    filename: 'bundle.js'
-  },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     loaders: [
-    {
-      test: /\.jsx?$/,
-      exclude: /(node_modules|bower_components)/,
-      loader: 'babel'
-    },
-    {
-      test: /\.css$/,
-      loaders: ["style", "css"]
-    },
     {
       test: /\.html$/,
       loader: "raw-loader"
@@ -41,3 +24,5 @@ module.exports = {
     hot: true
   }
 }
+
+module.exports = BaseConfig.merge(devConfig)

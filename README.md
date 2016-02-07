@@ -31,7 +31,7 @@ This project by default uses standard, popular tools for:
 Projects use npm to run scripts above:
 * `npm run lint`: runs linter
 * `npm run build`: runs builder
-* `npm run dev`: *web projects only* runs development server
+* `npm run dev`: In web projects this runs development server. For library projects, this watches for changes and runs tests
 * `npm run clean`: cleans build folder
 * `npm run test`: runs tests
 * `npm run docs`: runs documentation generator
@@ -62,5 +62,6 @@ Library projects include the following:
 Web projects include the following:
 * `src/index.html` - The starting html page
 * `src/<app_name>/styles.css` - The styles for your application
+* `webpack.config.base.js` - The base webpack configuration. This is used to share configuration between dev and prod builds
 * `webpack.config.dev.js` - The development webpack configuration. This includes a development server and hot code reload functionality
 * `webpack.config.prod.js` - The production webpack configuration

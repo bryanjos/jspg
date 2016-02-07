@@ -36,6 +36,9 @@ function create (app_path, isWebProject) {
     package_json_template = package_json_template.replace("{{app_name}}", app_name)
     fs.writeFileSync(app_path + "/package.json", package_json_template)
 
+    var webpack_base_template = fs.readFileSync(__dirname + '/templates/web/webpack.config.base.js.template', 'utf8')
+    fs.writeFileSync(app_path + "/webpack.config.base.js", webpack_base_template)
+
     var webpack_dev_template = fs.readFileSync(__dirname + '/templates/web/webpack.config.dev.js.template', 'utf8')
     fs.writeFileSync(app_path + "/webpack.config.dev.js", webpack_dev_template)
 
