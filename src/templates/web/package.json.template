@@ -2,7 +2,7 @@
   "name": "{{app_name}}",
   "version": "1.0.0",
   "description": "",
-  "main": "build/index.js",
+  "main": "build/bundle.js",
   "jsnext:main": "src/index.js",
   "scripts": {
     "lint": "standard src/**/*.js test/**/*.js",

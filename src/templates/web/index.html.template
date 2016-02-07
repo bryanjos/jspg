@@ -3,6 +3,5 @@
 </head>
 <body>
   <h1>{{app_name}}</h1>
-  <script src="index.js"></script>
 </body>
 </html>

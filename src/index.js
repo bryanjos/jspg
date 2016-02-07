@@ -61,6 +61,9 @@ function create (app_path, isWebProject) {
     fs.writeFileSync(app_path + "/webpack.config.js", webpack_template)
 
   }
+
+  console.log("Project created at " + app_path)
+  console.log("Make sure to run 'npm install'")
 }
 
 module.exports = {
