@@ -6,7 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [
+    "project",
+    "scaffold"
+  ],
+  "repository": {
+   "type": "git",
+   "url": "https://github.com/bryanjos/jspg.git"
+  },
+  "author": "Bryan Joseph <bryanjos@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "commander": "^2.9.0"
