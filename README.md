@@ -5,11 +5,11 @@ A command line tool to create new JavaScript projects.
 Attempts to create a standard JavaScript project structure and use existing JavaScript tools that allow flexibility beyond the default, yet allow for customizations to be made within the contraints of the default structure. This project allows for code and tests to be written in ES2015 JavaScript. 
 
 ## Installation
-`npm install -g javascript-project-generator`
+`npm install -g jspg`
 
 ## Usage
-`jsnew <app_name>` - Creates a new JavaScript project. This is used for either creating a node or JavaScript library project
-`jsnew <app_name> -w` - Creates a new JavaScript web project. This is used for defining a frontend project
+`jspg <app_name>` - Creates a new JavaScript project. This is used for either creating a node or JavaScript library project
+`jspg <app_name> -w` - Creates a new JavaScript web project. This is used for defining a frontend project
 
 ## Tools
 This project by default uses standard, popular tools for:
