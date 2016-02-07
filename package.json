@@ -1,7 +1,7 @@
 {
-  "name": "javascript-project-generator",
-  "version": "1.0.0",
-  "description": "JavaScript project scafold",
+  "name": "jspg",
+  "version": "0.0.1",
+  "description": "JavaScript project generator",
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +12,6 @@
     "commander": "^2.9.0"
   },
   "bin": {
-    "jsnew": "./bin/jsnew.js"
+    "jspg": "./bin/jspg.js"
   }
 }

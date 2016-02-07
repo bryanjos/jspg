@@ -1,0 +1,43 @@
+var path = require('path')
+var webpack = require('webpack')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+
+module.exports = {
+  devtool: 'cheap-source-map',
+  entry: [
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/dev-server',
+    './src/index'
+  ],
+  output: {
+    path: path.join(__dirname, 'build'),
+    filename: 'index.js'
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    })
+  ],
+  module: {
+    loaders: [
+    {
+      test: /\.jsx?$/,
+      exclude: /(node_modules|bower_components)/,
+      loader: 'babel'
+    },
+    {
+      test: /\.css$/,
+      loaders: ["style", "css"]
+    },
+    {
+      test: /\.html$/,
+      loader: "raw-loader"
+    }
+    ]
+  },
+  devServer: {
+    contentBase: './build',
+    hot: true
+  }
+}

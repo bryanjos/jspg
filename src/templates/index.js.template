@@ -1,3 +1,5 @@
+{{style}}
+
 function hello () {
   return 'world'
 }

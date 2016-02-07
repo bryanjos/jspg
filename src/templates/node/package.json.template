@@ -1,0 +1,40 @@
+{
+  "name": "{{app_name}}",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "jsnext:main": "src/index.js",
+  "scripts": {
+    "lint": "standard src/**/*.js test/**/*.js",
+    "build": "webpack",
+    "clean": "rm -rf build",
+    "test": "mocha test/**/*.js --compilers js:babel-core/register",
+    "docs": "jsdoc src/**/*.js -d docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "latest",
+    "babel-core": "latest",
+    "babel-loader": "latest",
+    "babel-preset-es2015": "latest",
+    "babel-preset-react": "latest",
+    "chai": "latest",
+    "mocha": "latest",
+    "standard": "latest",
+    "webpack": "latest",
+    "jsdoc": "latest"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "context",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach",
+      "it",
+      "expect"
+    ]
+  }
+}

@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
+  "jsnext:main": "src/index.js",
   "scripts": {
     "lint": "standard src/**/*.js test/**/*.js",
-    "build": "webpack",
+    "dev": "webpack-dev-server --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js",
     "clean": "rm -rf build",
-    "test": "mocha test/**/*.js --compilers js:babel-core/register"
+    "test": "mocha test/**/*.js --compilers js:babel-core/register",
     "docs": "jsdoc src/**/*.js -d docs"
   },
   "author": "",
@@ -22,7 +24,12 @@
     "mocha": "latest",
     "standard": "latest",
     "webpack": "latest",
-    "jsdoc": "latest"
+    "jsdoc": "latest",
+    "webpack-dev-server": "latest",
+    "html-webpack-plugin": "latest",
+    "css-loader": "latest",
+    "style-loader": "latest",
+    "raw-loader": "latest"
   },
   "standard": {
     "globals": [

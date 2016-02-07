@@ -2,7 +2,7 @@ var path = require('path');
 
 module.exports = {
   entry: './src/index.js',
-  target: '{{target}}',
+  target: 'node',
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'index.js'
