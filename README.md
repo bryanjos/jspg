@@ -22,6 +22,7 @@ This project by default uses standard, popular tools for:
 Projects use npm to run scripts above:
 * `npm run lint`: runs linter
 * `npm run build`: runs builder
+* `npm run dev`: *web projects only* runs development server
 * `npm run clean`: cleans build folder
 * `npm run test`: runs tests
 * `npm run docs`: runs documentation generator
@@ -42,10 +43,14 @@ The structure of projects is defined below:
 * `.babelrc` - The babel configuration file
 * `.gitignore`
 * `package.json`
-* `webpack.config.js` - The webpack configuration
 * `build/` - Build ends up here when `npm run build` is executed
 * `docs/` - Documentation ends up here when `npm run docs` is executed
+
+Library projects include the following:
+* `webpack.config.js` - The webpack configuration
 
 Web projects include the following:
 * `src/index.html` - The starting html page
 * `src/styles/app.css` - The styles for your application
+* `webpack.config.dev.js` - The development webpack configuration
+* `webpack.config.prod.js` - The production webpack configuration

@@ -10,7 +10,7 @@
     "build": "webpack --config webpack.config.prod.js",
     "clean": "rm -rf build",
     "test": "mocha test/**/*.js --compilers js:babel-core/register",
-    "docs": "jsdoc src/**/*.js -d docs"
+    "docs": "rm -rf docs && jsdoc src -r -d docs"
   },
   "author": "",
   "license": "ISC",
