@@ -51,6 +51,8 @@ Library projects include the following:
 
 Web projects include the following:
 * `src/index.html` - The starting html page
-* `src/styles/app.css` - The styles for your application
+* `src/{{app_name}}/styles.css` - The styles for your application
 * `webpack.config.dev.js` - The development webpack configuration
 * `webpack.config.prod.js` - The production webpack configuration
+
+Ideally, `src/index.js` is the entry point to your application. All other code would go in the root or a subdirectory of `src/{{app_name}}`.

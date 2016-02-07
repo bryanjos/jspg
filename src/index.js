@@ -7,6 +7,7 @@ function create (app_path, isWebProject) {
 
   fs.mkdirSync(app_path)
   fs.mkdirSync(app_path + "/src")
+  fs.mkdirSync(app_path + "/src/" + app_name)
   fs.mkdirSync(app_path + "/test")
 
   var gitignore_template = fs.readFileSync(__dirname + '/templates/.gitignore.template', 'utf8')
@@ -18,7 +19,7 @@ function create (app_path, isWebProject) {
   var index_template = fs.readFileSync(__dirname + '/templates/index.js.template', 'utf8')
 
   if(isWebProject){
-    index_template = index_template.replace("{{style}}", "require('./styles.css')\nif (process.env.NODE_ENV !== 'production') { require('./index.html') }")
+    index_template = index_template.replace("{{style}}", "require('./" + app_name + "/styles.css')\nif (process.env.NODE_ENV !== 'production') { require('./index.html') }")
   }else{
     index_template = index_template.replace("{{style}}", "")
   }
@@ -46,7 +47,7 @@ function create (app_path, isWebProject) {
     fs.writeFileSync(app_path + "/src/index.html", index_html_template)
 
     var styles_template = fs.readFileSync(__dirname + '/templates/web/styles.css.template', 'utf8')
-    fs.writeFileSync(app_path + "/src/styles.css", styles_template)
+    fs.writeFileSync(app_path + "/src/" + app_name + "/styles.css", styles_template)
 
 
   }else{
