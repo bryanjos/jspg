@@ -46,10 +46,10 @@ This allows for the commands to stay consistent, but the functionality to change
 The structure of projects is defined below:
 
 * `src/` - The src folder. This is where you would write your code
-* `src/index.js` - The entry point to your application.
+* `src/app.js` - The entry point to your application.
 * `src/<app_name>` - This would be where all of your other code would go. 
 * `test/` - The test folder. All of your tests would go here
-* `test/index-test.js` - An example test for `src/index.js`
+* `test/app-test.js` - An example test for `src/app.js`
 * `.babelrc` - The babel configuration file
 * `.gitignore`
 * `package.json` - The project's package.json. This is also where the above npm scripts are defined.

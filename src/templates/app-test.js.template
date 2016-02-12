@@ -1,8 +1,8 @@
 import chai from 'chai'
-import index from '../src/index'
+import app from '../src/app'
 
 describe('hello', () => {
   it('must return world', () => {
-    chai.expect(index.hello()).to.equal('world')
+    chai.expect(app.hello()).to.equal('world')
   })
 })

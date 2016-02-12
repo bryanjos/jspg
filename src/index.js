@@ -16,18 +16,18 @@ function create (app_path, isWebProject) {
   var babelrc_template = fs.readFileSync(__dirname + '/templates/.babelrc.template', 'utf8')
   fs.writeFileSync(app_path + "/.babelrc", babelrc_template)
 
-  var index_template = fs.readFileSync(__dirname + '/templates/index.js.template', 'utf8')
+  var app_template = fs.readFileSync(__dirname + '/templates/app.js.template', 'utf8')
 
   if(isWebProject){
-    index_template = index_template.replace("{{style}}", "require('./" + app_name + "/styles.css')\nif (process.env.NODE_ENV !== 'production') { require('./index.html') }")
+    app_template = app_template.replace("{{style}}", "require('./" + app_name + "/styles.css')\nif (process.env.NODE_ENV !== 'production') { require('./index.html') }")
   }else{
-    index_template = index_template.replace("{{style}}", "")
+    app_template = app_template.replace("{{style}}", "")
   }
 
-  fs.writeFileSync(app_path + "/src/index.js", index_template)
+  fs.writeFileSync(app_path + "/src/app.js", app_template)
 
-  var index_test_template = fs.readFileSync(__dirname + '/templates/index-test.js.template', 'utf8')
-  fs.writeFileSync(app_path + "/test/index-test.js", index_test_template)
+  var app_test_template = fs.readFileSync(__dirname + '/templates/app-test.js.template', 'utf8')
+  fs.writeFileSync(app_path + "/test/app-test.js", app_test_template)
 
 
   if(isWebProject){
@@ -65,7 +65,7 @@ function create (app_path, isWebProject) {
 
   }
 
-  console.log("Project created at " + app_path)
+  console.log("Project created at " + path.resolve(app_path))
   console.log("Make sure to run 'npm install'")
 }
 

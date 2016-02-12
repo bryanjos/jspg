@@ -18,7 +18,7 @@ var deepmerge = DeepMerge(function(target, source, key) {
 
 var baseConfig = {
   devtool: 'source-map',
-  entry: ['./src/index'],
+  entry: ['./src/app'],
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'bundle.js'
