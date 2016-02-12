@@ -2,15 +2,15 @@
   "name": "{{app_name}}",
   "version": "1.0.0",
   "description": "",
-  "main": "build/bundle.js",
-  "jsnext:main": "src/app.js",
+  "main": "dist/bundle.js",
+  "jsnext:main": "app/app.js",
   "scripts": {
-    "lint": "standard src/**/*.js test/**/*.js",
+    "lint": "standard app/**/*.js tests/**/*.js",
     "dev": "webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
-    "clean": "rm -rf build",
-    "test": "mocha test/**/*.js --compilers js:babel-core/register",
-    "docs": "rm -rf docs && jsdoc src -r -d docs"
+    "clean": "rm -rf dist",
+    "test": "mocha tests --compilers js:babel-core/register",
+    "docs": "rm -rf docs && jsdoc app -r -d docs"
   },
   "author": "",
   "license": "ISC",

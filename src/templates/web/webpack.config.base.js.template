@@ -18,9 +18,9 @@ var deepmerge = DeepMerge(function(target, source, key) {
 
 var baseConfig = {
   devtool: 'source-map',
-  entry: ['./src/app'],
+  entry: ['./app/app'],
   output: {
-    path: path.join(__dirname, 'build'),
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   plugins: [
@@ -31,7 +31,7 @@ var baseConfig = {
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './app/index.html'
     }),
   ],
   module: {

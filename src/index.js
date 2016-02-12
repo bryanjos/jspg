@@ -6,9 +6,9 @@ function create (app_path, isWebProject) {
   app_path = app_path.charAt(app_path.length - 1) === "/" ? app_path.substring(0, app_path.length - 1) : app_path
 
   fs.mkdirSync(app_path)
-  fs.mkdirSync(app_path + "/src")
-  fs.mkdirSync(app_path + "/src/" + app_name)
-  fs.mkdirSync(app_path + "/test")
+  fs.mkdirSync(app_path + "/app")
+  fs.mkdirSync(app_path + "/app/" + app_name)
+  fs.mkdirSync(app_path + "/tests")
 
   var gitignore_template = fs.readFileSync(__dirname + '/templates/.gitignore.template', 'utf8')
   fs.writeFileSync(app_path + "/.gitignore", gitignore_template)
@@ -24,10 +24,10 @@ function create (app_path, isWebProject) {
     app_template = app_template.replace("{{style}}", "")
   }
 
-  fs.writeFileSync(app_path + "/src/app.js", app_template)
+  fs.writeFileSync(app_path + "/app/app.js", app_template)
 
   var app_test_template = fs.readFileSync(__dirname + '/templates/app-test.js.template', 'utf8')
-  fs.writeFileSync(app_path + "/test/app-test.js", app_test_template)
+  fs.writeFileSync(app_path + "/tests/app-test.js", app_test_template)
 
 
   if(isWebProject){
@@ -47,10 +47,10 @@ function create (app_path, isWebProject) {
 
     var index_html_template = fs.readFileSync(__dirname + '/templates/web/index.html.template', 'utf8')
     index_html_template = index_html_template.replace("{{app_name}}", app_name)
-    fs.writeFileSync(app_path + "/src/index.html", index_html_template)
+    fs.writeFileSync(app_path + "/app/index.html", index_html_template)
 
     var styles_template = fs.readFileSync(__dirname + '/templates/web/styles.css.template', 'utf8')
-    fs.writeFileSync(app_path + "/src/" + app_name + "/styles.css", styles_template)
+    fs.writeFileSync(app_path + "/app/" + app_name + "/styles.css", styles_template)
 
 
   }else{

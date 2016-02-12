@@ -1,5 +1,5 @@
 import chai from 'chai'
-import app from '../src/app'
+import app from '../app/app'
 
 describe('hello', () => {
   it('must return world', () => {

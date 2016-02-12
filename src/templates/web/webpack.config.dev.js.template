@@ -20,7 +20,7 @@ devConfig = {
     ]
   },
   devServer: {
-    contentBase: './build',
+    contentBase: './dist',
     hot: true
   }
 }

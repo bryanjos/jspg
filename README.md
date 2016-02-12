@@ -45,11 +45,11 @@ This allows for the commands to stay consistent, but the functionality to change
 ## Structure
 The structure of projects is defined below:
 
-* `src/` - The src folder. This is where you would write your code
-* `src/app.js` - The entry point to your application.
-* `src/<app_name>` - This would be where all of your other code would go. 
-* `test/` - The test folder. All of your tests would go here
-* `test/app-test.js` - An example test for `src/app.js`
+* `app/` - The src folder. This is where you would write your code
+* `app/app.js` - The entry point to your application.
+* `app/<app_name>` - This would be where all of your other code would go. 
+* `tests/` - The test folder. All of your tests would go here
+* `tests/app-test.js` - An example test for `app/app.js`
 * `.babelrc` - The babel configuration file
 * `.gitignore`
 * `package.json` - The project's package.json. This is also where the above npm scripts are defined.
@@ -60,8 +60,8 @@ Library projects include the following:
 * `webpack.config.js` - The webpack configuration
 
 Web projects include the following:
-* `src/index.html` - The starting html page
-* `src/<app_name>/styles.css` - The styles for your application
+* `app/index.html` - The starting html page
+* `app/<app_name>/styles.css` - The styles for your application
 * `webpack.config.base.js` - The base webpack configuration. This is used to share configuration between dev and prod builds
 * `webpack.config.dev.js` - The development webpack configuration. This includes a development server and hot code reload functionality
 * `webpack.config.prod.js` - The production webpack configuration
