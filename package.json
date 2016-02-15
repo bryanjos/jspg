@@ -17,7 +17,8 @@
   "author": "Bryan Joseph <bryanjos@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "handlebars": "^4.0.5"
   },
   "bin": {
     "jspg": "./bin/jspg.js"
